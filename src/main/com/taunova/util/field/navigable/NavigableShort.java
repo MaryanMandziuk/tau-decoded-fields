@@ -6,7 +6,7 @@ package com.taunova.util.field.navigable;
 
 import com.taunova.util.field.AbstractNavigableField;
 import com.taunova.util.field.NavigableField;
-import com.taunova.util.field.type.FieldShort;
+import com.taunova.util.field.fixed.FieldShort;
 
 /**
  *
@@ -14,6 +14,13 @@ import com.taunova.util.field.type.FieldShort;
  */
 public class NavigableShort extends AbstractNavigableField implements NavigableField {
 
+    /**
+     * 
+     * @param name
+     * @param value
+     * @param offset
+     * @param size 
+     */
     public NavigableShort(String name, short value, int offset, int size) {
         super(new FieldShort(name, value), offset, size);
     }

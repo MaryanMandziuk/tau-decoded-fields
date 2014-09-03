@@ -10,7 +10,17 @@ package com.taunova.util.field;
  *
  * @author Renat Gilmanov
  */
-public interface NavigableField {
+public interface NavigableField extends Field {
+    
+    /**
+     * 
+     * @return 
+     */
     int getOffset();
+    
+    /**
+     * 
+     * @return 
+     */
     int getSize();
 }

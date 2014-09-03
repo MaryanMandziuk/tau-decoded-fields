@@ -5,7 +5,7 @@
  * file 'LICENSE.txt', which is part of this source code package.
  */
 
-package com.taunova.util.field.type;
+package com.taunova.util.field.fixed;
 
 import com.taunova.util.field.AbstractField;
 import com.taunova.util.field.FieldType;
@@ -14,28 +14,50 @@ import com.taunova.util.field.FieldType;
  *
  * @author Renat.Gilmanov
  */
-public class FieldByte extends AbstractField{
+public final class FieldString extends AbstractField {
 
-    private final byte value;
+    private final String value;
 
-    public FieldByte(String name, byte value) {
+    /**
+     * 
+     * @param name
+     * @param value
+     */
+    public FieldString(String name, String value) {
         super(name);
         this.value = value;
     }
 
-    public byte getValue() {
+    /**
+     * 
+     * @return
+     */
+    public String getValue() {
         return value;
     }
 
+    /**
+     * 
+     * @param format
+     * @return
+     */
     public String format(String format) {
-        return format(format, 0xFF & value);
+        return format(format, value);
     }
 
+    /**
+     * 
+     * @return
+     */
     public FieldType getFieldType() {
-        return FieldType.BYTE;
+        return FieldType.STRING;
     }
 
+    /**
+     * 
+     * @return
+     */
     public String toString() {
-        return Byte.toString(value);
+        return value;
     }
 }

@@ -5,7 +5,7 @@
  * file 'LICENSE.txt', which is part of this source code package.
  */
 
-package com.taunova.util.field.type;
+package com.taunova.util.field.fixed;
 
 import com.taunova.util.field.AbstractField;
 import com.taunova.util.field.FieldType;

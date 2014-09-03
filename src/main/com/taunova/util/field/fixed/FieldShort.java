@@ -5,7 +5,7 @@
  * file 'LICENSE.txt', which is part of this source code package.
  */
 
-package com.taunova.util.field.type;
+package com.taunova.util.field.fixed;
 
 import com.taunova.util.field.AbstractField;
 import com.taunova.util.field.FieldType;
@@ -14,16 +14,24 @@ import com.taunova.util.field.FieldType;
  *
  * @author Renat.Gilmanov
  */
-public final class FieldString extends AbstractField {
+public class FieldShort extends AbstractField {
 
-    private final String value;
+    private short value = 0;
+
+    /**
+     * 
+     * @param name
+     */
+    public FieldShort(String name) {
+        super(name);
+    }
 
     /**
      * 
      * @param name
      * @param value
      */
-    public FieldString(String name, String value) {
+    public FieldShort(String name, short value) {
         super(name);
         this.value = value;
     }
@@ -32,8 +40,16 @@ public final class FieldString extends AbstractField {
      * 
      * @return
      */
-    public String getValue() {
+    public short getValue() {
         return value;
+    }
+
+    /**
+     * 
+     * @param value
+     */
+    public void setValue(short value) {
+        this.value = value;
     }
 
     /**
@@ -42,7 +58,7 @@ public final class FieldString extends AbstractField {
      * @return
      */
     public String format(String format) {
-        return format(format, value);
+        return format(format, (0xFFFF & value));
     }
 
     /**
@@ -50,7 +66,7 @@ public final class FieldString extends AbstractField {
      * @return
      */
     public FieldType getFieldType() {
-        return FieldType.STRING;
+        return FieldType.SHORT;
     }
 
     /**
@@ -58,6 +74,6 @@ public final class FieldString extends AbstractField {
      * @return
      */
     public String toString() {
-        return value;
+        return Integer.toString(0xFFFF & value);
     }
 }

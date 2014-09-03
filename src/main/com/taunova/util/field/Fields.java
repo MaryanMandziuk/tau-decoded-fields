@@ -6,13 +6,13 @@
  */
 package com.taunova.util.field;
 
-import com.taunova.util.field.type.FieldBoolean;
-import com.taunova.util.field.type.FieldByte;
-import com.taunova.util.field.type.FieldByteEnum;
-import com.taunova.util.field.type.FieldInteger;
-import com.taunova.util.field.type.FieldLong;
-import com.taunova.util.field.type.FieldShort;
-import com.taunova.util.field.type.FieldString;
+import com.taunova.util.field.fixed.FieldBoolean;
+import com.taunova.util.field.fixed.FieldByte;
+import com.taunova.util.field.fixed.FieldByteEnum;
+import com.taunova.util.field.fixed.FieldInteger;
+import com.taunova.util.field.fixed.FieldLong;
+import com.taunova.util.field.fixed.FieldShort;
+import com.taunova.util.field.fixed.FieldString;
 
 /**
  *

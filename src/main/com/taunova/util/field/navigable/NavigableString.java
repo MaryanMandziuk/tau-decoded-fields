@@ -6,7 +6,7 @@ package com.taunova.util.field.navigable;
 
 import com.taunova.util.field.AbstractNavigableField;
 import com.taunova.util.field.NavigableField;
-import com.taunova.util.field.type.FieldString;
+import com.taunova.util.field.fixed.FieldString;
 
 /**
  *

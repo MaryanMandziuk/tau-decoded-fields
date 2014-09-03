@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  *
- * @author renat
+ * @author Renat.Hilmanov
  */
 public interface FieldContainer {
 
@@ -21,10 +21,6 @@ public interface FieldContainer {
      */
     int getFieldCount();
 
-    /**
-     * 
-     */
-    Field getField(int index);
 
     /**
      * 
@@ -32,11 +28,6 @@ public interface FieldContainer {
      * @return
      */
     Field getField(String name);
-
-    /**
-     * 
-     */
-    Map getFields();
 
     /**
      *
