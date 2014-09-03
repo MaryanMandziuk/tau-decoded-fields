@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+    <info organisation="net.taunova" module="tau-decoded-fields" status="integration"/>
+   <configurations>
+      <conf name="compile"/>
+      <conf name="runtime"/>
+      <conf name="standalone" extends="runtime"/>
+    </configurations>
+    <publications>
+      <artifact name="q2a-badge-generator" type="jar" conf="runtime"/>
+    </publications>
+    <dependencies>
+    </dependencies>
+</ivy-module>
