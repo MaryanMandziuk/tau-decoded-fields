@@ -7,8 +7,6 @@
 
 package com.taunova.util.field;
 
-import java.util.Map;
-
 /**
  *
  * @author Renat.Hilmanov
@@ -28,12 +26,6 @@ public interface FieldContainer {
      * @return
      */
     Field getField(String name);
-
-    /**
-     *
-     * @param field
-     */
-    void addField(Field field);
 
     /**
      * 
