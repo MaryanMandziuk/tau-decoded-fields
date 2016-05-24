@@ -68,7 +68,7 @@ public class FixedFieldsTest {
         assertFalse(byteEnumField.getID() == 0);
         assertEquals(byteEnumField.getValue(), value);
         assertTrue(Arrays.equals(value, byteEnumField.getValue()));
-        assertEquals(FieldByteEnum.formatArray("%s ", byteEnumField.getValue()), "11 3 3 4 5 6 ");
+        assertEquals(byteEnumField.format("%s "), "11 3 3 4 5 6 ");
     }
     
     /**

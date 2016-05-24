@@ -90,7 +90,7 @@ public class NavigableFieldsTest {
         assertEquals(byteEnumField.getSize(), size);
         assertTrue(byteEnumField.getFieldType() == fieldType);
         assertFalse(byteEnumField.getID() == 0);
-        assertEquals(NavigableByteEnum.formatArray("%s", value), expStr);
+        assertEquals(byteEnumField.format("%s"), expStr);
     }
     
     /**
