@@ -33,13 +33,15 @@ public class CoreFieldTest {
     }
 
     @Test
-    public void constructorTest() {        
+    public void constructorTest() {
         final String name = "name";
         final String value = "value";
         final TestField field = new TestField(name, value);
-     
+
         Assert.assertTrue(name.equals(field.getName()));        
         Assert.assertTrue(field.getFieldType() == FieldType.UNKNOWN);
         Assert.assertFalse(field.getID() == 0);
-    }        
+        Assert.assertEquals(field.format("Test %s."), "Test value.");
+        
+    }
 }

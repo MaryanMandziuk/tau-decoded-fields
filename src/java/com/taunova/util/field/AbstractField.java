@@ -75,16 +75,13 @@ public abstract class AbstractField implements Field {
         if (null == values) {
             throw new IllegalArgumentException("Formatted values can't be null");
         }
-
-        final Formatter formatter = new Formatter();
         
-        final short[] buffer = new short[values.length];
+        String str = "";
         for (int i = 0; i < values.length; i++) {
-            int value = 0;
-            value = value | 0xFF & values[i];
-            buffer[i] = (short)value;            
+            str += String.format(format, values[i]);
         }
-        return formatter.format(format, (Object) buffer).toString();
+        
+        return str;
     }
-    
+
 }
